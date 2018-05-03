@@ -1,0 +1,561 @@
+[       {
+"value":"Wukong",
+"synonyms":["Wukong"]
+},
+        {
+"value":"Jax",
+"synonyms":["Jax"]
+},
+        {
+"value":"Fiddlesticks",
+"synonyms":["Fiddlesticks"]
+},
+        {
+"value":"Shaco",
+"synonyms":["Shaco"]
+},
+        {
+"value":"Warwick",
+"synonyms":["Warwick"]
+},
+        {
+"value":"Xayah",
+"synonyms":["Xayah"]
+},
+        {
+"value":"Nidalee",
+"synonyms":["Nidalee"]
+},
+        {
+"value":"Zyra",
+"synonyms":["Zyra"]
+},
+        {
+"value":"Kled",
+"synonyms":["Kled"]
+},
+        {
+"value":"Brand",
+"synonyms":["Brand"]
+},
+        {
+"value":"Rammus",
+"synonyms":["Rammus"]
+},
+        {
+"value":"Illaoi",
+"synonyms":["Illaoi"]
+},
+        {
+"value":"Corki",
+"synonyms":["Corki"]
+},
+        {
+"value":"Braum",
+"synonyms":["Braum"]
+},
+        {
+"value":"Darius",
+"synonyms":["Darius"]
+},
+        {
+"value":"Tryndamere",
+"synonyms":["Tryndamere"]
+},
+        {
+"value":"Miss Fortune",
+"synonyms":["Miss Fortune"]
+},
+        {
+"value":"Yorick",
+"synonyms":["Yorick"]
+},
+        {
+"value":"Xerath",
+"synonyms":["Xerath"]
+},
+        {
+"value":"Sivir",
+"synonyms":["Sivir"]
+},
+        {
+"value":"Riven",
+"synonyms":["Riven"]
+},
+        {
+"value":"Orianna",
+"synonyms":["Orianna"]
+},
+        {
+"value":"Gangplank",
+"synonyms":["Gangplank"]
+},
+        {
+"value":"Malphite",
+"synonyms":["Malphite"]
+},
+        {
+"value":"Poppy",
+"synonyms":["Poppy"]
+},
+        {
+"value":"Lissandra",
+"synonyms":["Lissandra"]
+},
+        {
+"value":"Jayce",
+"synonyms":["Jayce"]
+},
+        {
+"value":"Nunu",
+"synonyms":["Nunu"]
+},
+        {
+"value":"Trundle",
+"synonyms":["Trundle"]
+},
+        {
+"value":"Karthus",
+"synonyms":["Karthus"]
+},
+        {
+"value":"Graves",
+"synonyms":["Graves"]
+},
+        {
+"value":"Zoe",
+"synonyms":["Zoe"]
+},
+        {
+"value":"Gnar",
+"synonyms":["Gnar"]
+},
+        {
+"value":"Lux",
+"synonyms":["Lux"]
+},
+        {
+"value":"Shyvana",
+"synonyms":["Shyvana"]
+},
+        {
+"value":"Renekton",
+"synonyms":["Renekton"]
+},
+        {
+"value":"Fiora",
+"synonyms":["Fiora"]
+},
+        {
+"value":"Jinx",
+"synonyms":["Jinx"]
+},
+        {
+"value":"Kalista",
+"synonyms":["Kalista"]
+},
+        {
+"value":"Fizz",
+"synonyms":["Fizz"]
+},
+        {
+"value":"Kassadin",
+"synonyms":["Kassadin"]
+},
+        {
+"value":"Sona",
+"synonyms":["Sona"]
+},
+        {
+"value":"Irelia",
+"synonyms":["Irelia"]
+},
+        {
+"value":"Viktor",
+"synonyms":["Viktor"]
+},
+        {
+"value":"Rakan",
+"synonyms":["Rakan"]
+},
+        {
+"value":"Kindred",
+"synonyms":["Kindred"]
+},
+        {
+"value":"Cassiopeia",
+"synonyms":["Cassiopeia"]
+},
+        {
+"value":"Maokai",
+"synonyms":["Maokai"]
+},
+        {
+"value":"Ornn",
+"synonyms":["Ornn"]
+},
+        {
+"value":"Thresh",
+"synonyms":["Thresh"]
+},
+        {
+"value":"Kayle",
+"synonyms":["Kayle"]
+},
+        {
+"value":"Hecarim",
+"synonyms":["Hecarim"]
+},
+        {
+"value":"Khazix",
+"synonyms":["Khazix"]
+},
+        {
+"value":"Olaf",
+"synonyms":["Olaf"]
+},
+        {
+"value":"Ziggs",
+"synonyms":["Ziggs"]
+},
+        {
+"value":"Syndra",
+"synonyms":["Syndra"]
+},
+        {
+"value":"DrMundo",
+"synonyms":["DrMundo"]
+},
+        {
+"value":"Karma",
+"synonyms":["Karma"]
+},
+        {
+"value":"Annie",
+"synonyms":["Annie"]
+},
+        {
+"value":"Akali",
+"synonyms":["Akali"]
+},
+        {
+"value":"Volibear",
+"synonyms":["Volibear"]
+},
+        {
+"value":"Yasuo",
+"synonyms":["Yasuo"]
+},
+        {
+"value":"Kennen",
+"synonyms":["Kennen"]
+},
+        {
+"value":"Rengar",
+"synonyms":["Rengar"]
+},
+        {
+"value":"Ryze",
+"synonyms":["Ryze"]
+},
+        {
+"value":"Shen",
+"synonyms":["Shen"]
+},
+        {
+"value":"Zac",
+"synonyms":["Zac"]
+},
+        {
+"value":"Talon",
+"synonyms":["Talon"]
+},
+        {
+"value":"Swain",
+"synonyms":["Swain"]
+},
+        {
+"value":"Bard",
+"synonyms":["Bard"]
+},
+        {
+"value":"Sion",
+"synonyms":["Sion"]
+},
+        {
+"value":"Vayne",
+"synonyms":["Vayne"]
+},
+        {
+"value":"Nasus",
+"synonyms":["Nasus"]
+},
+        {
+"value":"Kayn",
+"synonyms":["Kayn"]
+},
+        {
+"value":"Twisted Fate",
+"synonyms":["Twisted Fate"]
+},
+        {
+"value":"Chogath",
+"synonyms":["Chogath"]
+},
+        {
+"value":"Udyr",
+"synonyms":["Udyr"]
+},
+        {
+"value":"Lucian",
+"synonyms":["Lucian"]
+},
+        {
+"value":"Ivern",
+"synonyms":["Ivern"]
+},
+        {
+"value":"Leona",
+"synonyms":["Leona"]
+},
+        {
+"value":"Caitlyn",
+"synonyms":["Caitlyn"]
+},
+        {
+"value":"Sejuani",
+"synonyms":["Sejuani"]
+},
+        {
+"value":"Nocturne",
+"synonyms":["Nocturne"]
+},
+        {
+"value":"Zilean",
+"synonyms":["Zilean"]
+},
+        {
+"value":"Azir",
+"synonyms":["Azir"]
+},
+        {
+"value":"Rumble",
+"synonyms":["Rumble"]
+},
+        {
+"value":"Morgana",
+"synonyms":["Morgana"]
+},
+        {
+"value":"Taliyah",
+"synonyms":["Taliyah"]
+},
+        {
+"value":"Teemo",
+"synonyms":["Teemo"]
+},
+        {
+"value":"Urgot",
+"synonyms":["Urgot"]
+},
+        {
+"value":"Amumu",
+"synonyms":["Amumu"]
+},
+        {
+"value":"Galio",
+"synonyms":["Galio"]
+},
+        {
+"value":"Heimerdinger",
+"synonyms":["Heimerdinger"]
+},
+        {
+"value":"Anivia",
+"synonyms":["Anivia"]
+},
+        {
+"value":"Ashe",
+"synonyms":["Ashe"]
+},
+        {
+"value":"Velkoz",
+"synonyms":["Velkoz"]
+},
+        {
+"value":"Singed",
+"synonyms":["Singed"]
+},
+        {
+"value":"Skarner",
+"synonyms":["Skarner"]
+},
+        {
+"value":"Varus",
+"synonyms":["Varus"]
+},
+        {
+"value":"Twitch",
+"synonyms":["Twitch"]
+},
+        {
+"value":"Garen",
+"synonyms":["Garen"]
+},
+        {
+"value":"Blitzcrank",
+"synonyms":["Blitzcrank"]
+},
+        {
+"value":"Master Yi",
+"synonyms":["Master Yi"]
+},
+        {
+"value":"Elise",
+"synonyms":["Elise"]
+},
+        {
+"value":"Alistar",
+"synonyms":["Alistar"]
+},
+        {
+"value":"Katarina",
+"synonyms":["Katarina"]
+},
+        {
+"value":"Ekko",
+"synonyms":["Ekko"]
+},
+        {
+"value":"Mordekaiser",
+"synonyms":["Mordekaiser"]
+},
+        {
+"value":"Lulu",
+"synonyms":["Lulu"]
+},
+        {
+"value":"Camille",
+"synonyms":["Camille"]
+},
+        {
+"value":"Aatrox",
+"synonyms":["Aatrox"]
+},
+        {
+"value":"Draven",
+"synonyms":["Draven"]
+},
+        {
+"value":"Tahm Kench",
+"synonyms":["Tahm Kench"]
+},
+        {
+"value":"Pantheon",
+"synonyms":["Pantheon"]
+},
+        {
+"value":"Xin Zhao",
+"synonyms":["Xin Zhao"]
+},
+        {
+"value":"Aurelion Sol",
+"synonyms":["Aurelion Sol"]
+},
+        {
+"value":"LeeSin",
+"synonyms":["LeeSin"]
+},
+        {
+"value":"Taric",
+"synonyms":["Taric"]
+},
+        {
+"value":"Malzahar",
+"synonyms":["Malzahar"]
+},
+        {
+"value":"Kaisa",
+"synonyms":["Kaisa"]
+},
+        {
+"value":"Diana",
+"synonyms":["Diana"]
+},
+        {
+"value":"Tristana",
+"synonyms":["Tristana"]
+},
+        {
+"value":"RekSai",
+"synonyms":["RekSai"]
+},
+        {
+"value":"Vladimir",
+"synonyms":["Vladimir"]
+},
+        {
+"value":"Jarvan",
+"synonyms":["Jarvan"]
+},
+        {
+"value":"Nami",
+"synonyms":["Nami"]
+},
+        {
+"value":"Jhin",
+"synonyms":["Jhin"]
+},
+        {
+"value":"Soraka",
+"synonyms":["Soraka"]
+},
+        {
+"value":"Veigar",
+"synonyms":["Veigar"]
+},
+        {
+"value":"Janna",
+"synonyms":["Janna"]
+},
+        {
+"value":"Nautilus",
+"synonyms":["Nautilus"]
+},
+        {
+"value":"Evelynn",
+"synonyms":["Evelynn"]
+},
+        {
+"value":"Gragas",
+"synonyms":["Gragas"]
+},
+        {
+"value":"Zed",
+"synonyms":["Zed"]
+},
+        {
+"value":"Vi",
+"synonyms":["Vi"]
+},
+        {
+"value":"KogMaw",
+"synonyms":["KogMaw"]
+},
+        {
+"value":"Ahri",
+"synonyms":["Ahri"]
+},
+        {
+"value":"Quinn",
+"synonyms":["Quinn"]
+},
+        {
+"value":"Leblanc",
+"synonyms":["Leblanc"]
+},
+        {
+"value":"Ezreal",
+"synonyms":["Ezreal"]
+}
+]
