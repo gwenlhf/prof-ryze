@@ -1,0 +1,1352 @@
+<script>
+	$(function(){
+		/**
+		 * [ChampionStatistics-Detail-Item] Visit
+		 */
+		$.OP.GG.tracker.championStatistics.detail.item.visit('Direct');
+
+		var $pickItemList = $('#pickItemList').find('tbody tr'),
+			$btnShowMoreItemList = $('#btnShowMoreItemList');
+		if ($btnShowMoreItemList.length) {
+			$btnShowMoreItemList.on('click', function(){
+				$(this).hide();
+				$pickItemList.show();
+			});
+		}
+	});
+</script>
+<div class="overview__wrapper overview__wrapper--comp item-rank">
+		<table class="overview__table overview__table--recommand-build">
+		<colgroup>
+			<col>
+			<col width="54">
+			<col width="54">
+		</colgroup>
+		<thead>
+			<tr>
+				<td>
+					<div class="overview__title overview__title--table">Core Build</div>
+				</td>
+				<td>Pick Rate</td>
+				<td>Win Rate</td>
+			</tr>
+		</thead>
+		<tbody>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3065.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Spirit Visage&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health and healing effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+450 Health&lt;br&gt;+55 Magic Resist&lt;br&gt;+100% Base Health Regen &lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Increases all healing received by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2800 (800)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Spirit Visage">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							8.89%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							165
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							60.00%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1401.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Cinderhulk&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Health and Immolate Aura&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+300 Health&lt;br&gt;+15% Bonus Health&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Immolate:&lt;/unique&gt; Deals 11 (+1 per champion level) magic damage a second to nearby enemies while in combat. Deals 200% bonus damage to minions and monsters. &lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2500 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Cinderhulk">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3065.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Spirit Visage&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health and healing effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+450 Health&lt;br&gt;+55 Magic Resist&lt;br&gt;+100% Base Health Regen &lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Increases all healing received by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2800 (800)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Spirit Visage">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							3.39%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							63
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							55.56%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3742.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Dead Man&#039;s Plate&lt;/b&gt;&lt;br&gt;&lt;span&gt;Build momentum as you move around then smash into enemies.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+425 Health&lt;br&gt;+60 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Dreadnought:&lt;/unique&gt; While moving, build stacks of Momentum, increasing movement speed by up to 60 at 100 stacks. Momentum decays while under the effect of a stun, taunt, fear, polymorph, or immobilize effect.&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Crushing Blow:&lt;/unique&gt; Basic attacks deal 1 magic damage per stack of Momentum, discharging all stacks. At max stacks, if the attacker is melee, they also slow the target by 50% for 1 second.&lt;br&gt;&lt;br&gt;&lt;flavorText&gt;&#039;&#039;There&#039;s only one way you&#039;ll get this armor from me...&#039;&#039; - forgotten namesake&lt;/flavorText&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2900 (1100)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Dead Man&#039;s Plate">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.75%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							51
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							54.90%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1414.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3065.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Spirit Visage&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health and healing effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+450 Health&lt;br&gt;+55 Magic Resist&lt;br&gt;+100% Base Health Regen &lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Increases all healing received by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2800 (800)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Spirit Visage">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.42%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							45
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							55.56%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3001.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Abyssal Mask&lt;/b&gt;&lt;br&gt;&lt;span&gt;Nearby enemies take more magic damage&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+350 Health&lt;br&gt;&lt;mana&gt;+300 Mana&lt;/mana&gt;&lt;br&gt;+55 Magic Resist&lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Eternity:&lt;/unique&gt; 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.&lt;br&gt;&lt;aura&gt;UNIQUE Aura:&lt;/aura&gt; Nearby enemy champions take 15% more magic damage.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2900 (1080)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Abyssal Mask">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.83%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							34
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							58.82%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3143.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Randuin&#039;s Omen&lt;/b&gt;&lt;br&gt;&lt;span&gt;Greatly increases defenses, activate to slow nearby enemies&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+400 Health&lt;br&gt;+60 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; -20% damage taken from basic attack critical strikes.&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Cold Steel:&lt;/unique&gt; When hit by basic attacks, reduces the attacker&#039;s Attack Speed by 15% for 1 second.&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Slows the Movement Speed of nearby enemy units by 55% for 2 seconds (60 second cooldown).&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2900 (900)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Randuin&#039;s Omen">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.72%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							32
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							50.00%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3194.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Adaptive Helm&lt;/b&gt;&lt;br&gt;&lt;span&gt;Reduces damage from repeated spells and effects.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+350 Health&lt;br&gt;+55 Magic Resist&lt;br&gt;+100% Base Health Regeneration &lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Taking magic damage from a spell or effect reduces all subsequent magic damage from that same spell or effect by 20% for 4 seconds.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2800 (1000)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Adaptive Helm">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.62%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							30
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							63.33%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3065.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Spirit Visage&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health and healing effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+450 Health&lt;br&gt;+55 Magic Resist&lt;br&gt;+100% Base Health Regen &lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Increases all healing received by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2800 (800)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Spirit Visage">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+																	<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-right-p.png" width="7">
+															</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_32&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+															</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.40%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							26
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							46.15%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+					</tbody>
+	</table>
+</div>
+
+<div class="overview__wrapper overview__wrapper--comp item-rank">
+		<table class="overview__table overview__table--stat">
+		<colgroup>
+			<col>
+			<col width="54">
+			<col width="54">
+		</colgroup>
+		<thead>
+			<tr>
+				<td>
+					<div class="overview__title overview__title--table">Boots</div>
+				</td>
+				<td>Pick Rate</td>
+				<td>Win Rate</td>
+			</tr>
+		</thead>
+		<tbody>
+							<tr class="Row First">
+					<td class="Cell Single">
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3047.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Ninja Tabi&lt;/b&gt;&lt;br&gt;&lt;span&gt;Enhances Movement Speed and reduces incoming basic attack damage&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;stats&gt;+20 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Blocks 12% of the damage from basic attacks.&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1100 (500)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Ninja Tabi">
+													</div>
+						<div class="overview__name overview__name--table">Ninja Tabi</div>
+					</td>
+
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							42.81%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,773
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							44.11%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr class="Row ">
+					<td class="Cell Single">
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3111.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Mercury&#039;s Treads&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Movement Speed and reduces duration of disabling effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;stats&gt;+25 Magic Resist&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Tenacity:&lt;/unique&gt; Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1100 (350)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Mercury&#039;s Treads">
+													</div>
+						<div class="overview__name overview__name--table">Mercury&#039;s Treads</div>
+					</td>
+
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							30.03%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,244
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							45.1%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr class="Row ">
+					<td class="Cell Single">
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3117.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Boots of Mobility&lt;/b&gt;&lt;br&gt;&lt;span&gt;Greatly enhances Movement Speed when out of combat&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +25 Movement Speed. Increases to +115 Movement Speed when out of combat for 5 seconds.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;900 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Boots of Mobility">
+													</div>
+						<div class="overview__name overview__name--table">Boots of Mobility</div>
+					</td>
+
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							10.84%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							449
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							46.33%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr class="Row ">
+					<td class="Cell Single">
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3158.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Ionian Boots of Lucidity&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Movement Speed and Cooldown Reduction&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; +10% Cooldown Reduction&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Reduces Summoner Spell cooldowns by 10%&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;rules&gt;&lt;font color=&#039;#FDD017&#039;&gt;&#039;&#039;This item is dedicated in honor of Ionia&#039;s victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.&#039;&#039;&lt;/font&gt;&lt;/rules&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;900 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Ionian Boots of Lucidity">
+													</div>
+						<div class="overview__name overview__name--table">Ionian Boots of Lucidity</div>
+					</td>
+
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							10.21%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							423
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							48.23%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr class="Row ">
+					<td class="Cell Single">
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3020.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Sorcerer&#039;s Shoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Enhances Movement Speed and magic damage&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;stats&gt;+18 &lt;a href=&quot;#&quot;&gt;Magic Penetration&lt;/a&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1100 (800)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Sorcerer&#039;s Shoes">
+													</div>
+						<div class="overview__name overview__name--table">Sorcerer&#039;s Shoes</div>
+					</td>
+
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							5.58%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							231
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							47.19%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+					</tbody>
+	</table>
+</div>
+<div class="overview__wrapper overview__wrapper--comp item-rank">
+		<table class="overview__table overview__table--stat">
+		<colgroup>
+			<col>
+			<col width="54">
+			<col width="54">
+		</colgroup>
+		<thead>
+			<tr>
+				<td>
+					<div class="overview__title overview__title--table">Starter Items</div>
+				</td>
+				<td>Pick Rate</td>
+				<td>Win Rate</td>
+			</tr>
+		</thead>
+		<tbody>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1039.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hunter&#039;s Talisman&lt;/b&gt;&lt;br&gt;&lt;span&gt;Provides damage against Monsters and Mana Regen in the Jungle&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;&lt;mana&gt;+150% Base Mana Regen while in Jungle  &lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Tooth:&lt;/unique&gt; Damaging a monster with a spell or attack  steals 25 Health over 5 seconds and burns them for 20 magic damage. Killing monsters grants &lt;font color=&#039;#99BBBB&#039;&gt;&lt;a href=&quot;#&quot;&gt;special bonus experience&lt;/a&gt;&lt;/font&gt;.&lt;br&gt;&lt;br&gt;&lt;font color=&#039;#8C8C8C&#039; size=&#039;16&#039;&gt;&lt;scaleLevel&gt;Kindle - &lt;/scaleLevel&gt;Burn damage increases to 50 if you have bonus health from an item or effect.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;350 (350)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/2031.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Refillable Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Restores Health over time. Refills at shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Consumes a charge to restore 125 Health over 12 seconds. Holds up to 2 charges and refills upon visiting the shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;150 (150)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							68.1%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							2,852
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							45.65%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1041.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hunter&#039;s Machete&lt;/b&gt;&lt;br&gt;&lt;span&gt;Provides damage and life steal versus Monsters&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+10% Life Steal vs. Monsters&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Nail:&lt;/unique&gt; Basic attacks vs. Monsters deal 25 bonus damage on hit and grant you 15% bonus Attack Speed for 2 seconds. Killing monsters grants &lt;font color=&#039;#99BBBB&#039;&gt;&lt;a href=&quot;#&quot;&gt;special bonus experience&lt;/a&gt;&lt;/font&gt;.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;350 (350)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/2031.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Refillable Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Restores Health over time. Refills at shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Consumes a charge to restore 125 Health over 12 seconds. Holds up to 2 charges and refills upon visiting the shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;150 (150)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							21.35%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							894
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							42.95%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1039.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hunter&#039;s Talisman&lt;/b&gt;&lt;br&gt;&lt;span&gt;Provides damage against Monsters and Mana Regen in the Jungle&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;&lt;mana&gt;+150% Base Mana Regen while in Jungle  &lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Tooth:&lt;/unique&gt; Damaging a monster with a spell or attack  steals 25 Health over 5 seconds and burns them for 20 magic damage. Killing monsters grants &lt;font color=&#039;#99BBBB&#039;&gt;&lt;a href=&quot;#&quot;&gt;special bonus experience&lt;/a&gt;&lt;/font&gt;.&lt;br&gt;&lt;br&gt;&lt;font color=&#039;#8C8C8C&#039; size=&#039;16&#039;&gt;&lt;scaleLevel&gt;Kindle - &lt;/scaleLevel&gt;Burn damage increases to 50 if you have bonus health from an item or effect.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;350 (350)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/2003.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Health Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Consume to restore Health over time&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 5 at one time. Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;consumable&gt;Click to Consume:&lt;/consumable&gt; Restores 150 Health over 15 seconds.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;50 (50)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																									<span class="overview__hotkey">3</span>
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							6.14%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							257
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							42.02%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1039.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hunter&#039;s Talisman&lt;/b&gt;&lt;br&gt;&lt;span&gt;Provides damage against Monsters and Mana Regen in the Jungle&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;&lt;mana&gt;+150% Base Mana Regen while in Jungle  &lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Tooth:&lt;/unique&gt; Damaging a monster with a spell or attack  steals 25 Health over 5 seconds and burns them for 20 magic damage. Killing monsters grants &lt;font color=&#039;#99BBBB&#039;&gt;&lt;a href=&quot;#&quot;&gt;special bonus experience&lt;/a&gt;&lt;/font&gt;.&lt;br&gt;&lt;br&gt;&lt;font color=&#039;#8C8C8C&#039; size=&#039;16&#039;&gt;&lt;scaleLevel&gt;Kindle - &lt;/scaleLevel&gt;Burn damage increases to 50 if you have bonus health from an item or effect.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;350 (350)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/2031.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Refillable Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Restores Health over time. Refills at shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Consumes a charge to restore 125 Health over 12 seconds. Holds up to 2 charges and refills upon visiting the shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;150 (150)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/3364.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Oracle Lens&lt;/b&gt;&lt;br&gt;&lt;span&gt;Disables nearby invisible wards and traps for a duration&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 Trinket.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;Active:&lt;/active&gt; Scans around you, warning against hidden hostile units, and revealing invisible traps and revealing / disabling nearby wards for 10 seconds (90 to 60 second cooldown).&lt;/maintext&gt;&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							0.96%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							40
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							50%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr>
+					<td>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/1041.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hunter&#039;s Machete&lt;/b&gt;&lt;br&gt;&lt;span&gt;Provides damage and life steal versus Monsters&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+10% Life Steal vs. Monsters&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Nail:&lt;/unique&gt; Basic attacks vs. Monsters deal 25 bonus damage on hit and grant you 15% bonus Attack Speed for 2 seconds. Killing monsters grants &lt;font color=&#039;#99BBBB&#039;&gt;&lt;a href=&quot;#&quot;&gt;special bonus experience&lt;/a&gt;&lt;/font&gt;.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;350 (350)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																							</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+													<div class="overview__item overview__item--table">
+																	<img src="//opgg-static.akamaized.net/images/lol/item/2003.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Health Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Consume to restore Health over time&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 5 at one time. Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;consumable&gt;Click to Consume:&lt;/consumable&gt; Restores 150 Health over 15 seconds.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;50 (50)&lt;/span&gt;" class="overview__image overview__image--table tip">
+																									<span class="overview__hotkey">3</span>
+															</div>
+							<div class="overview__arrow overview__arrow--table">
+							</div>
+											</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							0.69%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							29
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							48.28%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+					</tbody>
+	</table>
+</div>
+<div class="overview__wrapper overview__wrapper--comp item-rank item-rank--">
+		<table id="pickItemList" class="overview__table overview__table--stat">
+		<colgroup>
+			<col>
+			<col width="54">
+			<col width="54">
+		</colgroup>
+		<thead>
+			<tr>
+				<td>
+					<div class="overview__title overview__title--table">Item</div>
+				</td>
+				<td>Pick Rate</td>
+				<td>Win Rate</td>
+			</tr>
+		</thead>
+		<tbody>
+							<tr style="">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1402.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+													</div>
+						<div class="overview__name overview__name--table">Enchantment: Runic Echoes</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							8.14%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,901
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							45.50%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3047.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Ninja Tabi&lt;/b&gt;&lt;br&gt;&lt;span&gt;Enhances Movement Speed and reduces incoming basic attack damage&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;stats&gt;+20 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Blocks 12% of the damage from basic attacks.&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1100 (500)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Ninja Tabi">
+													</div>
+						<div class="overview__name overview__name--table">Ninja Tabi</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							7.55%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,764
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							44.33%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3025.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Iceborn Gauntlet&lt;/b&gt;&lt;br&gt;&lt;span&gt;Basic attacks create a slow field after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+65 Armor&lt;br&gt;+20% Cooldown Reduction&lt;br&gt;&lt;mana&gt;+500 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).&lt;br&gt;&lt;br&gt;Size of zone increases with bonus armor.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2700 (750)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Iceborn Gauntlet">
+													</div>
+						<div class="overview__name overview__name--table">Iceborn Gauntlet</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							6.81%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,590
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							51.95%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/2031.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Refillable Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Restores Health over time. Refills at shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Consumes a charge to restore 125 Health over 12 seconds. Holds up to 2 charges and refills upon visiting the shop.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;150 (150)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Refillable Potion">
+													</div>
+						<div class="overview__name overview__name--table">Refillable Potion</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							5.60%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,308
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							38.00%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1401.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Cinderhulk&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Health and Immolate Aura&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+300 Health&lt;br&gt;+15% Bonus Health&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Immolate:&lt;/unique&gt; Deals 11 (+1 per champion level) magic damage a second to nearby enemies while in combat. Deals 200% bonus damage to minions and monsters. &lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2500 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Cinderhulk">
+													</div>
+						<div class="overview__name overview__name--table">Enchantment: Cinderhulk</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							5.48%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,281
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							44.50%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3111.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Mercury&#039;s Treads&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Movement Speed and reduces duration of disabling effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;stats&gt;+25 Magic Resist&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Tenacity:&lt;/unique&gt; Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1100 (350)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Mercury&#039;s Treads">
+													</div>
+						<div class="overview__name overview__name--table">Mercury&#039;s Treads</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							5.32%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							1,242
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							45.17%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/2055.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Control Ward&lt;/b&gt;&lt;br&gt;&lt;span&gt;Used to disable wards and invisible traps in an area.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Can only carry 3 Control Wards in inventory.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;consumable&gt;Click to Consume:&lt;/consumable&gt; Places a ward that grants vision of the surrounding area. This device will also reveal invisible traps and reveal / disable wards. Control Wards do not disable other Control Wards. Camouflaged units will also be revealed. &lt;br&gt;&lt;br&gt;Limit 1 &lt;font color=&#039;#BBFFFF&#039;&gt;Control Ward&lt;/font&gt; on the map per player.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;75 (75)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Control Ward">
+													</div>
+						<div class="overview__name overview__name--table">Control Ward</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							3.42%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							799
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							42.68%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3065.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Spirit Visage&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health and healing effects&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+450 Health&lt;br&gt;+55 Magic Resist&lt;br&gt;+100% Base Health Regen &lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Increases all healing received by 30%.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2800 (800)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Spirit Visage">
+													</div>
+						<div class="overview__name overview__name--table">Spirit Visage</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							3.26%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							761
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							51.64%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/2032.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hunter&#039;s Potion&lt;/b&gt;&lt;br&gt;&lt;span&gt;Restores Health and Mana over time - Refills at shop and has increased capacity&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 type of Healing Potion.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Consumes a charge to restore 60 Health and 35 Mana over 8 seconds. Holds up to 5 charges and refills upon visiting the shop.&lt;br&gt;&lt;br&gt;Killing a Large Monster grants 1 charge.&lt;br&gt;&lt;br&gt;&lt;rules&gt;(Killing a Large Monster at full charges will automatically consume the newest charge.)&lt;/rules&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;400 (250)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Hunter&#039;s Potion">
+													</div>
+						<div class="overview__name overview__name--table">Hunter&#039;s Potion</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.95%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							690
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							40.14%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1414.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Runic Echoes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Ability Power and periodically empowers your Spells&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+60 Ability Power&lt;br&gt;+7% Movement Speed&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Echo:&lt;/unique&gt; Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 60 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.&lt;br&gt;&lt;br&gt;This effect deals 250% damage to Large Monsters. Hitting a Large Monster with this effect will restore 25% of your missing Mana.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2625 (340)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Runic Echoes">
+													</div>
+						<div class="overview__name overview__name--table">Enchantment: Runic Echoes</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.87%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							670
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							44.78%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1028.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Ruby Crystal&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+150 Health&lt;/stats&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;400 (400)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Ruby Crystal">
+													</div>
+						<div class="overview__name overview__name--table">Ruby Crystal</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.74%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							640
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							39.53%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1011.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Giant&#039;s Belt&lt;/b&gt;&lt;br&gt;&lt;span&gt;Greatly increases Health&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+380 Health&lt;/stats&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1000 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Giant&#039;s Belt">
+													</div>
+						<div class="overview__name overview__name--table">Giant&#039;s Belt</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.54%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							593
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							46.04%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3067.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Kindlegem&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Health and Cooldown Reduction&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+200 Health  &lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; +10% Cooldown Reduction&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;800 (400)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Kindlegem">
+													</div>
+						<div class="overview__name overview__name--table">Kindlegem</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							2.06%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							480
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							43.75%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3117.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Boots of Mobility&lt;/b&gt;&lt;br&gt;&lt;span&gt;Greatly enhances Movement Speed when out of combat&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +25 Movement Speed. Increases to +115 Movement Speed when out of combat for 5 seconds.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;900 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Boots of Mobility">
+													</div>
+						<div class="overview__name overview__name--table">Boots of Mobility</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.90%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							443
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							46.50%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1029.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Cloth Armor&lt;/b&gt;&lt;br&gt;&lt;span&gt;Slightly increases Armor&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+15 Armor&lt;/stats&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;300 (300)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Cloth Armor">
+													</div>
+						<div class="overview__name overview__name--table">Cloth Armor</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.87%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							437
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							36.16%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3742.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Dead Man&#039;s Plate&lt;/b&gt;&lt;br&gt;&lt;span&gt;Build momentum as you move around then smash into enemies.&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+425 Health&lt;br&gt;+60 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Dreadnought:&lt;/unique&gt; While moving, build stacks of Momentum, increasing movement speed by up to 60 at 100 stacks. Momentum decays while under the effect of a stun, taunt, fear, polymorph, or immobilize effect.&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Crushing Blow:&lt;/unique&gt; Basic attacks deal 1 magic damage per stack of Momentum, discharging all stacks. At max stacks, if the attacker is melee, they also slow the target by 50% for 1 second.&lt;br&gt;&lt;br&gt;&lt;flavorText&gt;&#039;&#039;There&#039;s only one way you&#039;ll get this armor from me...&#039;&#039; - forgotten namesake&lt;/flavorText&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2900 (1100)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Dead Man&#039;s Plate">
+													</div>
+						<div class="overview__name overview__name--table">Dead Man&#039;s Plate</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.83%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							427
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							57.85%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3158.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Ionian Boots of Lucidity&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Movement Speed and Cooldown Reduction&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;groupLimit&gt;Limited to 1 pair of boots.&lt;/groupLimit&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; +10% Cooldown Reduction&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Enhanced Movement:&lt;/unique&gt; +45 Movement Speed&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Reduces Summoner Spell cooldowns by 10%&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;rules&gt;&lt;font color=&#039;#FDD017&#039;&gt;&#039;&#039;This item is dedicated in honor of Ionia&#039;s victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.&#039;&#039;&lt;/font&gt;&lt;/rules&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;900 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Ionian Boots of Lucidity">
+													</div>
+						<div class="overview__name overview__name--table">Ionian Boots of Lucidity</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.80%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							421
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							47.98%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3211.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Spectre&#039;s Cowl&lt;/b&gt;&lt;br&gt;&lt;span&gt;Improves defense and grants regeneration upon being damaged&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+250 Health&lt;br&gt;+25 Magic Resist&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Grants 150% Base Health Regen for up to 10 seconds after taking damage from an enemy champion.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1200 (350)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Spectre&#039;s Cowl">
+													</div>
+						<div class="overview__name overview__name--table">Spectre&#039;s Cowl</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.73%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							403
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							43.67%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3143.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Randuin&#039;s Omen&lt;/b&gt;&lt;br&gt;&lt;span&gt;Greatly increases defenses, activate to slow nearby enemies&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+400 Health&lt;br&gt;+60 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; -20% damage taken from basic attack critical strikes.&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Cold Steel:&lt;/unique&gt; When hit by basic attacks, reduces the attacker&#039;s Attack Speed by 15% for 1 second.&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Slows the Movement Speed of nearby enemy units by 55% for 2 seconds (60 second cooldown).&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2900 (900)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Randuin&#039;s Omen">
+													</div>
+						<div class="overview__name overview__name--table">Randuin&#039;s Omen</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.68%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							393
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							52.67%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1413.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Enchantment: Cinderhulk&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants Health and Immolate Aura&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+300 Health&lt;br&gt;+15% Bonus Health&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Immolate:&lt;/unique&gt; Deals 11 (+1 per champion level) magic damage a second to nearby enemies while in combat. Deals 200% bonus damage to minions and monsters. &lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2500 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Enchantment: Cinderhulk">
+													</div>
+						<div class="overview__name overview__name--table">Enchantment: Cinderhulk</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.59%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							371
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							43.13%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3109.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Knight&#039;s Vow&lt;/b&gt;&lt;br&gt;&lt;span&gt;Partner with an ally to protect each other&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+250 Health&lt;br&gt;+40 Armor&lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Designate an allied champion as your &lt;a href=&quot;#&quot;&gt;Partner&lt;/a&gt; (90 second cooldown).&lt;br&gt;&lt;passive&gt;UNIQUE Passive:&lt;/passive&gt; If your &lt;a href=&quot;#&quot;&gt;Partner&lt;/a&gt; is nearby, gain +20 additional Armor and +15% Movement Speed towards them.&lt;br&gt;&lt;passive&gt;UNIQUE Passive:&lt;/passive&gt; If your &lt;a href=&quot;#&quot;&gt;Partner&lt;/a&gt; is nearby, heal for 12% of the damage your &lt;a href=&quot;#&quot;&gt;Partner&lt;/a&gt; deals to champions and redirect 12% of the damage your &lt;a href=&quot;#&quot;&gt;Partner&lt;/a&gt; takes from champions to you as &lt;font color=&#039;#FFFFFF&#039;&gt;true&lt;/font&gt; damage (healing and damage redirection are reduced by 50% if you are ranged).&lt;br&gt;&lt;br&gt;&lt;rules&gt;(Champions can only be linked by one Knight&#039;s Vow at a time.)&lt;/rules&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2200 (600)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Knight&#039;s Vow">
+													</div>
+						<div class="overview__name overview__name--table">Knight&#039;s Vow</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.55%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							362
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							54.14%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3001.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Abyssal Mask&lt;/b&gt;&lt;br&gt;&lt;span&gt;Nearby enemies take more magic damage&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+350 Health&lt;br&gt;&lt;mana&gt;+300 Mana&lt;/mana&gt;&lt;br&gt;+55 Magic Resist&lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Eternity:&lt;/unique&gt; 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.&lt;br&gt;&lt;aura&gt;UNIQUE Aura:&lt;/aura&gt; Nearby enemy champions take 15% more magic damage.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2900 (1080)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Abyssal Mask">
+													</div>
+						<div class="overview__name overview__name--table">Abyssal Mask</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.40%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							326
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							53.07%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3190.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Locket of the Iron Solari&lt;/b&gt;&lt;br&gt;&lt;span&gt;Activate to shield nearby allies from damage&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+30 Armor&lt;br&gt;+60 Magic Resist&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;active&gt;UNIQUE Active:&lt;/active&gt; Grants a decaying shield to nearby allied champions for 2.5 seconds that absorbs up to 30 (+15 per level) &lt;scaleHealth&gt;(+20% of your bonus health)&lt;/scaleHealth&gt; damage (120 second cooldown).&lt;br&gt;&lt;br&gt;&lt;rules&gt;Shield per level uses the higher of your level or the target&#039;s level.&lt;br&gt;Shield ratio scales with your level.&lt;br&gt;Shield amount is reduced to 25% if the target has been affected by another Locket of the Iron Solari in the last 20 seconds.&lt;/rules&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2200 (650)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Locket of the Iron Solari">
+													</div>
+						<div class="overview__name overview__name--table">Locket of the Iron Solari</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.33%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							311
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							53.38%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1031.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Chain Vest&lt;/b&gt;&lt;br&gt;&lt;span&gt;Greatly increases Armor&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+40 Armor&lt;/stats&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;800 (500)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Chain Vest">
+													</div>
+						<div class="overview__name overview__name--table">Chain Vest</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.32%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							308
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							39.61%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3024.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Glacial Shroud&lt;/b&gt;&lt;br&gt;&lt;span&gt;Increases Armor and Cooldown Reduction&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+20 Armor&lt;br&gt;&lt;mana&gt;+250 Mana&lt;/mana&gt;&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; +10% Cooldown Reduction&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;900 (250)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Glacial Shroud">
+													</div>
+						<div class="overview__name overview__name--table">Glacial Shroud</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.31%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							305
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							30.49%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3083.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Warmog&#039;s Armor&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants massive Health and Health Regen&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+800 Health&lt;br&gt;+200% Base Health Regen &lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; +10% Cooldown Reduction&lt;br&gt;&lt;unique&gt;UNIQUE Passive:&lt;/unique&gt; Grants &lt;unlockedPassive&gt;Warmog&#039;s Heart&lt;/unlockedPassive&gt; if you have at least 3000 maximum Health.&lt;br&gt;&lt;br&gt;&lt;unlockedPassive&gt;Warmog&#039;s Heart:&lt;/unlockedPassive&gt; Restores 25% of maximum Health every 5 seconds if damage hasn&#039;t been taken within 6 seconds (3 seconds for damage from minions and monsters).&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2850 (400)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Warmog&#039;s Armor">
+													</div>
+						<div class="overview__name overview__name--table">Warmog&#039;s Armor</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.22%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							285
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							61.40%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/1033.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Null-Magic Mantle&lt;/b&gt;&lt;br&gt;&lt;span&gt;Slightly increases Magic Resist&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+25 Magic Resist&lt;/stats&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;450 (450)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Null-Magic Mantle">
+													</div>
+						<div class="overview__name overview__name--table">Null-Magic Mantle</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.16%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							271
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							36.90%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3152.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Hextech Protobelt-01&lt;/b&gt;&lt;br&gt;&lt;span&gt;Activate to dash forward and unleash a fiery explosion&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+300 Health&lt;br&gt;+60 Ability Power&lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Active - Fire Bolt:&lt;/unique&gt; Dash forward and unleash a nova of fire bolts that deal &lt;scaleLevel&gt;75 - 150&lt;/scaleLevel&gt; (+25% of your Ability Power) as magic damage (40 second cooldown, shared with other &lt;font color=&#039;#9999FF&#039;&gt;&lt;a href=&quot;#&quot;&gt;Hextech&lt;/a&gt;&lt;/font&gt; items).&lt;br&gt;&lt;br&gt;Champions and Monsters hit by multiple fire bolts take 10% damage per additional bolt.&lt;br&gt;&lt;br&gt;&lt;rules&gt;(This dash cannot pass through terrain.)&lt;/rules&gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;2500 (650)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Hextech Protobelt-01">
+													</div>
+						<div class="overview__name overview__name--table">Hextech Protobelt-01</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.13%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							265
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							53.96%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3082.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Warden&#039;s Mail&lt;/b&gt;&lt;br&gt;&lt;span&gt;Slows Attack Speed of enemy champions when receiving basic attacks&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;+40 Armor&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Cold Steel:&lt;/unique&gt; When hit by basic attacks, reduces the attacker&#039;s Attack Speed by 15% for 1 seconds.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1000 (400)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Warden&#039;s Mail">
+													</div>
+						<div class="overview__name overview__name--table">Warden&#039;s Mail</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							1.12%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							262
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							44.27%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+							<tr style="display:none;">
+					<td>
+						<div class="overview__item overview__item--table">
+															<img src="//opgg-static.akamaized.net/images/lol/item/3057.png?image=w_40&amp;v=15192252000" title="&lt;b style=&#039;color: #00cfbc&#039;&gt;Sheen&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grants a bonus to next attack after spell cast&lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;stats&gt;&lt;mana&gt;+250 Mana&lt;/mana&gt;&lt;br&gt;+10% Cooldown Reduction&lt;/stats&gt;&lt;br&gt;&lt;br&gt;&lt;unique&gt;UNIQUE Passive - Spellblade:&lt;/unique&gt; After using an ability, the next basic attack deals bonus physical damage equal to 100% base Attack Damage on hit (1.5 second cooldown).&lt;/span&gt;&lt;br&gt;&lt;span&gt;Cost:&lt;/span&gt; &lt;span style=&#039;color: #ffc659&#039;&gt;1050 (700)&lt;/span&gt;" class="overview__image overview__image--table tip" alt="Sheen">
+													</div>
+						<div class="overview__name overview__name--table">Sheen</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table overview__ratio-value--strong">
+							0.98%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+							230
+						</div>
+					</td>
+					<td>
+						<div class="overview__ratio-value overview__ratio-value--table">
+							34.78%
+						</div>
+						<div class="overview__ratio-count overview__ratio-count--table">
+						</div>
+					</td>
+				</tr>
+					</tbody>
+	</table>
+</div>
+	<div id="btnShowMoreItemList" class="overview__wrapper overview__wrapper--more">
+		<button class="overview__btn overview__btn--more">Learn more<img src="//opgg-static.akamaized.net/css3/sprite/images/icon-morecontents-down.png" width="10"></button>
+	</div>
+<!-- 34.230.83.188 -->

@@ -1,33 +1,59 @@
 const rq = require('request-promise-native');
 const cheerio = require('cheerio');
 const fs = require('fs');
-const BASE_URL = 'http://op.gg';
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36';
+const BASE_URL = 'http://na.op.gg';
+const USER_AGENT = 'Mozilla/5.0 (Linux; U; Android 2.3; en-us) AppleWebKit/999+ (KHTML, like Gecko) Safari/999.9';
+const DEFAULT_HEADERS = {
+	'User-Agent' : USER_AGENT,
+	'DNT' : 1
+};
 
-function fetchChampBuild( name, role = '') {
-	/*let champurl = `${ BASE_URL }/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
+function fetchChampBuild( name, role ) {
+	// if (!role) {
+	// 	return fetchDefaultRole(name)
+	// 		.then(role => fetchChampBuild(name, role));
+	// }
+	let champurl = `${ BASE_URL }/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
 	let opts = {
 		uri : champurl + '/item?',
 		headers : ajaxHeaders(champurl),
-		transform : (body) => cheerio.load(body)
+		transform: (body) => cheerio.load(body)
 	}
-	return rq(opts);*/
-	return cheerio.load(fs.readFileSync('./template.html'));
+	return rq(opts)
+		.then($ => parseChampBuild($));
+		// .then(body => fs.writeFileSync('./mob_template.html', body));
 }
 
-function parseChampBuild($) {
+// awful function to find a default role, if none provided
+// (ping the server, wait for a redirect, then take the string out of the headers)
+/*function fetchDefaultRole( name ) {
+	let url = `${ BASE_URL }/champion/${ name.toLowerCase() }/statistics`;
+	let opts = {
+		uri : url,
+		headers : DEFAULT_HEADERS,
+		simple: false,
+		followRedirect : false,
+		resolveWithFullResponse: true
+	}
+	return rq(opts)
+		.then(response => {
+			let loc = response.headers.location;
+			let role = loc.split('/');
+			role = role[role.length - 1];
+			return role;
+		});
+}*/
+
+function parseChampBuild( $ ) {
 	let items = [];
-	$('tr').eq(1).find('li.tip').each((i, e) => {
-		let $item = cheerio.load(e.attribs.title);
-		items.push($item('b').text());
+	$('tbody tr').first().find('img.tip').each((i, e) => {
+		items.push(e.attribs.alt);
 	});
-	// console.log($('tr').eq(1).html());
-	// console.log($.html());
 	return items;
 }
 
 // OP.GG uses Referer headers to route AJAX requests
-function ajaxHeaders(referer) {
+function ajaxHeaders( referer ) {
 	return {
 		'User-Agent' : USER_AGENT,
 		'Referer' : referer,
@@ -36,11 +62,6 @@ function ajaxHeaders(referer) {
 	}
 }
 
-/*fetchChampBuild('Kindred', 'jungle')
-	.then($ => parseChampBuild($))
-	.then(items => console.log(items))
-	// .then($ => getBuildFromChampStats($))
-	// .then(items => console.log(items.html()))
-	.catch(err => console.log(err));*/
-
-console.log(parseChampBuild(fetchChampBuild('kindred', 'jungle')));
+fetchChampBuild('gragas', 'jungle')
+	.then((items) => console.log(items))
+	.catch((err) => console.log(err));
