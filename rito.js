@@ -20,6 +20,29 @@ function fetchChampBuild( name, role ) {
 		.then($ => parseChampBuild($));
 }
 
+function fetchBestChamps( role ) {
+	let url = `${ BASE_URL }/champion/statistics`;
+	let opts = {
+		uri : url,
+		headers : {
+			'User-Agent' : USER_AGENT_DESKTOP,
+			'DNT' : 1
+		},
+		transform: (body) => cheerio.load(body)
+	};
+	return rq(opts)
+		.then($ => parseTopWinrates($, role));
+}
+
+function parseTopWinrates( $ , role ) {
+	let champs = [];
+	$(`.champion-trend-tier-${ role.toUpperCase() } .champion-index-table__cell--champion .champion-index-table__name`).each((i, e) => {
+		if  (i == 3) return false;
+		champs.push($(e).text());
+	});
+	return champs;
+}
+
 // awful function to find a default role, if none provided
 // (ping the server, wait for a redirect, then take the string out of the headers)
 function fetchDefaultRole( name ) {
@@ -78,13 +101,13 @@ function parseChampRunes ( $ ) {
 // Some calls are weirdly more efficient on desktop
 function ajaxHeaders( referer, useMobile = true) {
 	return {
-		'User-Agent' : USER_AGENT_MOBILE,
+		'User-Agent' : (useMobile) ? USER_AGENT_MOBILE : USER_AGENT_DESKTOP,
 		'Referer' : referer,
 		'X-Requested-With' : 'XMLHttpRequest',
 		'DNT': 1
 	}
 }
 
-fetchChampRunes('vayne')
-	.then((items) => console.log(items))
-	.catch((err) => console.log(err));
+fetchBestChamps('jungle')
+	.then(champs => console.log(champs))
+	.catch(err => console.log(err));
