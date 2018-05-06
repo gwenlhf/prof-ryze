@@ -1,10 +1,10 @@
 const rq = require('request-promise-native');
 const cheerio = require('cheerio');
 
-const BASE_URL = 'http://na.op.gg';
 const USER_AGENT_MOBILE = 'Mozilla/5.0 (Linux; U; Android 2.3; en-us) AppleWebKit/999+ (KHTML, like Gecko) Safari/999.9';
 const USER_AGENT_DESKTOP = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/5'
 
+const DEFAULT_REGION = 'na';
 const DEFAULT_HEADERS = {
 	'User-Agent' : USER_AGENT_DESKTOP,
 	'DNT' : 1
@@ -46,7 +46,7 @@ function fetchChampBuild( name, role ) {
 function fetchBestBans( role = 'all') {
 	let opts = {
 		endpoint : '/champion/ajax/statistics/trendChampionList/type=banratio&',
-		refer : '/champion/statistics'
+		referer : '/champion/statistics'
 	}
 	return fetchOPGG(opts)
 		.then($ => parseBestBans($, role));
@@ -77,8 +77,8 @@ function fetchBestChamps( role ) {
 
 // awful function to find a default role, if none provided
 // (ping the server, wait for a redirect, then take the string out of the headers)
-function fetchDefaultRole( name ) {
-	let url = `${ BASE_URL }/champion/${ name.toLowerCase() }/statistics`;
+function fetchDefaultRole( name, region = DEFAULT_REGION ) {
+	let url = `http://${ region }.op.gg/champion/${ name.toLowerCase() }/statistics`;
 	let opts = {
 		uri : url,
 		headers : {
@@ -99,7 +99,7 @@ function fetchDefaultRole( name ) {
 }
 
 
-function parseBestChamps( $ , role ) {
+function parseBestChamps( $ , role = 'top') {
 	let champs = [];
 	$(`.champion-trend-tier-${ role.toUpperCase() } .champion-index-table__cell--champion .champion-index-table__name`).each((i, e) => {
 		if  (i == 3) return false;
