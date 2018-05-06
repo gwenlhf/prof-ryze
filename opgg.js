@@ -10,29 +10,45 @@ const DEFAULT_HEADERS = {
 	'DNT' : 1
 };
 
+function fetchOPGG( opts ) {
+	if (!opts.endpoint)
+		return Promise.reject("must specify endpoint");
+	if (!opts.region)
+		opts.region = DEFAULT_REGION;
+	if (opts.referer)
+		opts.headers = ajaxHeaders(`http://${ opts.region }.op.gg${ opts.referer }`, opts.useMobile);
+	if (!opts.headers)
+		opts.headers = DEFAULT_HEADERS;
+	let uri = `http://${ opts.region }.op.gg${ opts.endpoint }`;
+	let rq_opts = {
+		uri : uri,
+		headers : opts.headers,
+		transform : (body) => cheerio.load(body)
+	};
+	return rq(rq_opts);
+}
+
 function fetchChampBuild( name, role ) {
 	if (!role) {
 		return fetchDefaultRole(name)
 			.then(role => fetchChampBuild(name, role));
 	}
-	let champurl = `${ BASE_URL }/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
+	let refer = `/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
 	let opts = {
-		uri : champurl + '/item?',
-		headers : ajaxHeaders(champurl),
-		transform : (body) => cheerio.load(body)
-	};
-	return rq(opts)
+		endpoint : `${ refer }/item?`,
+		referer : refer,
+		useMobile : true
+	}
+	return fetchOPGG(opts)
 		.then($ => parseChampBuild($));
 }
 
 function fetchBestBans( role = 'all') {
-	let url = `${ BASE_URL }/champion/ajax/statistics/trendChampionList/type=banratio&`;
 	let opts = {
-		uri : url,
-		headers : ajaxHeaders(`${ BASE_URL }/champion/statistics`, false),
-		transform : (body) => cheerio.load(body)
-	};
-	return rq(opts)
+		endpoint : '/champion/ajax/statistics/trendChampionList/type=banratio&',
+		refer : '/champion/statistics'
+	}
+	return fetchOPGG(opts)
 		.then($ => parseBestBans($, role));
 }
 
@@ -42,24 +58,20 @@ function fetchChampRunes ( name, role ) {
 		return fetchDefaultRole(name)
 			.then(role => fetchChampRunes(name, role));
 	}
-	let champurl = `${BASE_URL}/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
+	let refer = `/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
 	let opts = {
-		uri : champurl + '/rune?',
-		headers : ajaxHeaders(champurl, false),
-		transform : (body) => cheerio.load(body)
+		endpoint : `${ refer }/rune?`,
+		referer : refer
 	};
-	return rq(opts)
+	return fetchOPGG(opts)
 		.then($ => parseChampRunes($));
 }
 
 function fetchBestChamps( role ) {
-	let url = `${ BASE_URL }/champion/statistics`;
 	let opts = {
-		uri : url,
-		headers : DEFAULT_HEADERS,
-		transform: (body) => cheerio.load(body)
+		endpoint : '/champion/statistics'
 	};
-	return rq(opts)
+	return fetchOPGG(opts)
 		.then($ => parseBestChamps($, role));
 }
 
@@ -131,6 +143,9 @@ function ajaxHeaders( referer, useMobile = true ) {
 	}
 }
 
-fetchBestBans('mid')
-	.then(bans => console.log(bans))
-	.catch(err => console.log(err));
+module.exports = {
+	fetchChampBuild:fetchChampBuild,
+	fetchBestBans:fetchBestBans,
+	fetchChampRunes:fetchChampRunes,
+	fetchBestChamps:fetchBestChamps,
+};
