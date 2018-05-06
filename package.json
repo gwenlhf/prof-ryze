@@ -1,10 +1,9 @@
 {
-  "name": "rito",
+  "name": "prof-ryze",
   "version": "1.0.0",
-  "description": "Rito: League of Legends Assistant",
-  "main": "rito.js",
+  "description": "Professor Ryze: League of Legends Assistant",
+  "main": "lol-static-data.js",
   "scripts": {
-    "start": "rito.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "config": "^1.30.0",
     "request": "^2.85.0",
     "request-promise-native": "^1.0.5"
   }

@@ -1,6 +1,5 @@
 const rq = require('request-promise-native');
 const cheerio = require('cheerio');
-const fs = require('fs');
 
 const BASE_URL = 'http://na.op.gg';
 const USER_AGENT_MOBILE = 'Mozilla/5.0 (Linux; U; Android 2.3; en-us) AppleWebKit/999+ (KHTML, like Gecko) Safari/999.9';
@@ -37,6 +36,22 @@ function fetchBestBans( role = 'all') {
 		.then($ => parseBestBans($, role));
 }
 
+
+function fetchChampRunes ( name, role ) {
+	if (!role) {
+		return fetchDefaultRole(name)
+			.then(role => fetchChampRunes(name, role));
+	}
+	let champurl = `${BASE_URL}/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
+	let opts = {
+		uri : champurl + '/rune?',
+		headers : ajaxHeaders(champurl, false),
+		transform : (body) => cheerio.load(body)
+	};
+	return rq(opts)
+		.then($ => parseChampRunes($));
+}
+
 function fetchBestChamps( role ) {
 	let url = `${ BASE_URL }/champion/statistics`;
 	let opts = {
@@ -46,24 +61,6 @@ function fetchBestChamps( role ) {
 	};
 	return rq(opts)
 		.then($ => parseBestChamps($, role));
-}
-
-function parseBestChamps( $ , role ) {
-	let champs = [];
-	$(`.champion-trend-tier-${ role.toUpperCase() } .champion-index-table__cell--champion .champion-index-table__name`).each((i, e) => {
-		if  (i == 3) return false;
-		champs.push($(e).text());
-	});
-	return champs;
-}
-
-function parseBestBans( $ , role ) {
-	let champs = [];
-	$(`.champion-trend-banratio-${ role.toUpperCase() } .champion-index-table__cell--champion .champion-index-table__name`).each((i, e) => {
-		if  (i == 3) return false;
-		champs.push($(e).text());
-	});
-	return champs;
 }
 
 // awful function to find a default role, if none provided
@@ -89,19 +86,23 @@ function fetchDefaultRole( name ) {
 		});
 }
 
-function fetchChampRunes ( name, role ) {
-	if (!role) {
-		return fetchDefaultRole(name)
-			.then(role => fetchChampRunes(name, role));
-	}
-	let champurl = `${BASE_URL}/champion/${ name.toLowerCase() }/statistics/${ role.toLowerCase() }`;
-	let opts = {
-		uri : champurl + '/rune?',
-		headers : ajaxHeaders(champurl, false),
-		transform : (body) => cheerio.load(body)
-	};
-	return rq(opts)
-		.then($ => parseChampRunes($));
+
+function parseBestChamps( $ , role ) {
+	let champs = [];
+	$(`.champion-trend-tier-${ role.toUpperCase() } .champion-index-table__cell--champion .champion-index-table__name`).each((i, e) => {
+		if  (i == 3) return false;
+		champs.push($(e).text());
+	});
+	return champs;
+}
+
+function parseBestBans( $ , role ) {
+	let champs = [];
+	$(`.champion-trend-banratio-${ role.toUpperCase() } .champion-index-table__cell--champion .champion-index-table__name`).each((i, e) => {
+		if  (i == 3) return false;
+		champs.push($(e).text());
+	});
+	return champs;
 }
 
 function parseChampBuild( $ ) {
