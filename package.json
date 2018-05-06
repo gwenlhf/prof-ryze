@@ -4,6 +4,7 @@
   "description": "Professor Ryze: League of Legends Assistant",
   "main": "lol-static-data.js",
   "scripts": {
+    "start": "node ./lol-static-data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

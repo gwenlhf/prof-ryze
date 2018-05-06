@@ -56,6 +56,6 @@ function fetchChampAbility( id, idx ) {
 }
 
 
-fetchChampPassive(12)
+fetchChampStatic(12)
 	.then(passive => console.log(passive))
 	.catch(err => console.log(err));
