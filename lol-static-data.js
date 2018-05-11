@@ -1,4 +1,5 @@
 const rq = require('request-promise-native');
+const fs = require('fs');
 const cfg = require('config');
 
 const API_KEY = cfg.get('RIOT_API_KEY');
@@ -29,6 +30,22 @@ function fetchRiotApi( opts ) {
 	return rq(rq_opts);
 }
 
+function fetchAllItemsStatic (tags = [] ) {
+	opts = {
+		endpoint : '/lol/static-data/v3/items',
+		tags : tags
+	};
+	return fetchRiotApi(opts);
+}
+
+function fetchItemStatic( id, tags = [] ) {
+	opts = {
+		endpoint : `/lol/static-data/v3/items/${ id }`,
+		tags : tags
+	};
+	return fetchRiotApi(opts);
+}
+
 function fetchAllChampsStatic( tags = [] ) {
 	opts = {
 		endpoint : '/lol/static-data/v3/champions',
@@ -55,7 +72,9 @@ function fetchChampAbility( id, idx ) {
 		.then(data => data.spells[idx]);
 }
 
+function fetchChampData() {
+	return fetchAllChampsStatic(['spells', 'passive', 'allytips', 'enemytips', 'keys', 'image']);
+}
 
-fetchChampStatic(12)
-	.then(passive => console.log(passive))
-	.catch(err => console.log(err));
+fetchChampData()
+	.then(data => fs.writeFileSync('./champs_static_data.json', JSON.stringify(data)));
