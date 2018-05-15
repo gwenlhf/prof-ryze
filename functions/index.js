@@ -4,9 +4,23 @@ const functions = require('firebase-functions');
 const { WebhookClient, Card, Suggestion } = require('dialogflow-fulfillment');
 const firebase = require('firebase');
 const fbConfig = require('./nocommit/prof-ryze-firebase-usercfg.json');
-
 const version = '8.9.1';
 const ddragon = `http://ddragon.leagueoflegends.com/cdn/${ version }`;
+
+const ABILITIES = {
+	Passive : -1,
+	Q : 0,
+	W : 1,
+	E : 2,
+	R : 3
+};
+
+const SPELL_VAR_NAMES = {
+	spelldamage : 'Ability Power',
+	attackdamage : 'Attack Damage',
+	bonusattackdamage : 'Bonus Attack Damage',
+	bonushealth : 'Bonus Health'
+};
 
 firebase.initializeApp(fbConfig);
 
@@ -23,41 +37,75 @@ function webHookDriver( req, res ) {
 	agent.handleRequest(intentMap);
 }
 
-function champTipHandler( agent, isAlly=true ) {
+function abilityScalingHandler( agent ) {
 	let key = agent.parameters.Champion;
-	return fetchChampTip( key, isAlly )
-		.then( tip => champTipResponses( agent, tip, isAlly ));
+	let idx = ABILITIES[ agent.parameters.Ability ];
+	if (idx === -1) {
+		return fetchChampPassive( key, idx )
+			.then(passive => abilityScalingResponses( agent, ability ));
+	}
+	return fetchChampAbility( key, idx )
+		.then(ability => abilityScalingResponses(agent, ability));
 }
 
-function champTipResponses ( agent, tip, isAlly ) {
-	agent.add( tip );
-	let card = (isAlly) ? new Card(`Playing against `)
-	if (isAlly) {
-
+function abilityScalingResponses( agent, ability ) {
+	let card = new Card(`Scaling ${ ability.name }`);
+	card.setImage(ability.image.full);
+	let scales = new Set([]);
+	for (let v of ability.vars) {
+		if (v.link && Object.keys(SPELL_VAR_NAMES).includes((v.link))) {
+			scales.add(SPELL_VAR_NAMES[v.link]);
+		}
 	}
+	scales = [...scales];
+	card.setText(`${ability.name} scales with ${
+		scales.slice(0, scales.length - 1).join(', ')
+	}${ (scales.length > 1) ?
+		' and ' + scales[scales.length -1] :
+		scales[0]
+	}.`);
+	card.setImage( ddragon + '/img/spell/' + ability.image.full);
+	card.setPlatform(agent.requestSource);
+	agent.add(card);
+}
+
+
+
+function champTipHandler( agent, isAlly=true ) {
+	let key = agent.parameters.Champion;
+	let fetchTip = Promise.all([fetchChampTips(key, isAlly), fetchChampImage(key)])
+		.then(results => {
+			let tips = results[0];
+			let image = results[1];
+			return {
+				Champion : key,
+				Tip : tips[ Math.floor( Math.random() * tips.length ) ],
+				Image : ddragon + '/img/champion/' + image
+			};
+		});
+	return fetchTip.then( tip => champTipResponses( agent, tip, isAlly ));
+}
+
+function fetchChampImage ( key ) {
+	return retrieveDb(`/champs/data/${key}/image/full`);
+}
+function champTipResponses ( agent, tip, isAlly ) {
+	let base_card = {
+		title : (isAlly) ? `Playing as ${tip.Champion}` : `Playing against ${tip.Champion}`,
+		text : tip.Tip,
+		imageUrl : tip.Image
+	};
+	let gcard = new Card(base_card);
+	gcard.setPlatform(agent.requestSource);
+	agent.add(gcard);
 }
 
 function abilityDescHandler ( agent ) {
 	let key = agent.parameters.Champion;
-	if (agent.parameters.Ability === 'Passive') {
+	let idx = ABILITIES[ agent.parameters.Ability ];
+	if (idx === -1) {
 		return fetchChampPassive( key )
 			.then(passive => passiveDescResponses(agent, passive));
-	}
-	let idx = 0;
-	switch (agent.parameters.Ability) {
-	case 'Q':
-		break;
-	case 'W':
-		idx = 1;
-		break;
-	case 'E':
-		idx = 2;
-		break;
-	case 'R':
-		idx = 3;
-		break;
-	default:
-		return Promise.reject(new Error("invalid Ability parameter"));
 	}
 	return fetchChampAbility( key, idx )
 		.then(ability => abilityDescResponses(agent, ability));
@@ -71,20 +119,26 @@ function retrieveDb( ref ) {
 
 function passiveDescResponses( agent, passive ) {
 	agent.add( `${ passive.name }: ${ passive.sanitizedDescription }` );
-	agent.add( new Card({
+	let base_card = {
 		title : passive.name,
 		text : passive.sanitizedDescription,
 		imageUrl : ddragon + '/img/passive/' + passive.image.full
-	}));
+	};
+	let gcard = new Card(base_card);
+	gcard.setPlatform(agent.requestSource);
+	agent.add(gcard);
 }
 
 function abilityDescResponses( agent, ability ) {
 	agent.add( `${ ability.name }: ${ ability.sanitizedDescription }` );
-	agent.add( new Card({
+	let base_card = {
 		title : ability.name,
 		text : ability.sanitizedDescription,
 		imageUrl : ddragon + '/img/spell/' + ability.image.full
-	}));
+	};
+	let gcard = new Card(base_card);
+	gcard.setPlatform(agent.requestSource);
+	agent.add(gcard);
 }
 
 function fetchAbilityDesc( key, idx=0 ) {
@@ -99,20 +153,23 @@ function fetchChampPassive( key ) {
 	return retrieveDb(`/champs/data/${ key }/passive`);
 }
 
-function fetchChampTip( key, isAlly=true ) {
+function fetchChampTips( key, isAlly=true ) {
 	return retrieveDb(`/champs/data/${ key }/${ (isAlly) ? 'ally' : 'enemy' }tips`)
-		.then(tips => {
-			return {
-			Champion : key,
-			Tip : tips[ Math.floor( Math.random() * tips.length ) ]
-			}
-		});
 }
 
-/*let dummy_agent = {
+let dummy_agent = {
 	idx: 0,
+	parameters : {
+		Champion: 'Jax',
+		Ability : 'Q'
+	},
+	requestSource : 'ACTIONS_ON_GOOGLE',
 	add: function(e) {
 		this[this.idx] = e;
 		this.idx++;
 	}
-};*/
+};
+
+abilityScalingHandler(dummy_agent)
+	.then(() => console.log(dummy_agent))
+	.catch(err => console.log(err));
