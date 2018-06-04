@@ -39,7 +39,7 @@ function webHookDriver( req, res ) {
 	intentMap.set('Ability-Desc', abilityDescHandler);
 	intentMap.set('Ability-Cooldown', abilityCooldownHandler);
 	intentMap.set('Ability-Scaling', abilityScalingHandler);
-	intentMap.set('Passive-Scaling', passiveScalingHandler);
+	intentMap.set('Passive-Desc', passiveDescHandler);
 	intentMap.set('Champ-Tip-Ally', a => champTipHandler( a, true ) );
 	intentMap.set('Champ-Tip-Enemy', a => champTipHandler( a, false ) );
 	agent.handleRequest(intentMap);
@@ -56,7 +56,7 @@ function abilityCooldownHandler( agent ) {
 }
 
 function abilityCooldownResponses( agent, ability ) {
-	let isUltimate = ABILITIES[ agent.parameters.Ability ] === ABILITIES.R;
+	// let isUltimate = ABILITIES[ agent.parameters.Ability ] === ABILITIES.R;
 	agent.add(
 		`${ ability.name } has a cooldown of between ${ ability.cooldown[0] } ` + 
 		`seconds at rank 1 to ${ ability.cooldown[ ability.cooldown.length-1 ] }` +
@@ -65,33 +65,28 @@ function abilityCooldownResponses( agent, ability ) {
 		`to ${ (ability.cooldown[ ability.cooldown.length - 1] * 0.55).toFixed(1) } seconds at rank ${ ability.cooldown.length }.`);
 	let card = new Card( `${ability.name} Cooldown` );
 	let cds = ability.cooldown;
-	card.setImage( ability.image.full );
+	card.setImage( ddragon + '/img/spell/' + ability.image.full );
 	// TODO: migrate to table cards when out of dev preview
 	// (https://developers.google.com/actions/assistant/responses#table_card)
 	card.setText(
 		`0% CDR: ${ cds.join('/') }
 		45% CDR: ${ cds.map(x => x * 0.55).join('/') }`
-		+ (isUltimate) ? 
+		/*+ (isUltimate) ? 
 		`0% CDR with Ultimate Hunter: ${ cds.map(x => (x * 0.85).toFixed(1)).join('/')}
 		45% CDR with Ultimate Hunter: ${ cds.map(x => (x * 0.40).toFixed(1)).join('/')}`
-		: ''
+		: ''*/
 	);
+	card.setPlatform(agent.requestSource);
+	agent.add(card);
 }
 
 // Ability-Scaling
-// Passive-Scaling
  
 function abilityScalingHandler( agent ) {
 	let key = agent.parameters.Champion;
 	let idx = ABILITIES[ agent.parameters.Ability ];
 	return fetchChampAbility( key, idx )
 		.then( ability => abilityScalingResponses( agent, ability ) );
-}
-
-function passiveScalingHandler( agent ) {
-	let key = agent.parameters.Champion;
-	return fetchChampPassive( key )
-		.then( passive => abilityScalingResponses( agent, ability ) );
 }
 
 function abilityScalingResponses( agent, ability ) {
@@ -155,18 +150,20 @@ function champTipResponses ( agent, tip, isAlly ) {
 }
 
 // Ability-Desc
+// Passive-Desc
 
 function abilityDescHandler ( agent ) {
 	let key = agent.parameters.Champion;
 	let idx = ABILITIES[ agent.parameters.Ability ];
-	if (idx === -1) {
-		return fetchChampPassive( key )
-			.then(passive => passiveDescResponses(agent, passive));
-	}
 	return fetchChampAbility( key, idx )
 		.then(ability => abilityDescResponses(agent, ability));
 }
 
+function passiveDescHandler( agent ) {
+	let key = agent.parameters.Champion;
+	return fetchChampPassive( key )
+		.then(passive => passiveDescResponses(agent, passive));
+}
 
 function passiveDescResponses( agent, passive ) {
 	agent.add( `${ passive.name }: ${ passive.sanitizedDescription }` );
