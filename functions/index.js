@@ -56,21 +56,23 @@ function abilityCooldownHandler( agent ) {
 }
 
 function abilityCooldownResponses( agent, ability ) {
+	let fmtCDR = (x, cdr) => Math.floor(x * (1 - cdr));
 	// let isUltimate = ABILITIES[ agent.parameters.Ability ] === ABILITIES.R;
 	agent.add(
 		`${ ability.name } has a cooldown of between ${ ability.cooldown[0] } ` + 
 		`seconds at rank 1 to ${ ability.cooldown[ ability.cooldown.length-1 ] }` +
 		` seconds at rank ${ ability.cooldown.length }.` +
-		`With 45% cooldown reduction, it has a cooldown of ${ (ability.cooldown[0] * 0.55).toFixed(1) } seconds at rank 1` +
-		`to ${ (ability.cooldown[ ability.cooldown.length - 1] * 0.55).toFixed(1) } seconds at rank ${ ability.cooldown.length }.`);
+		` With 45% cooldown reduction, it has a cooldown of ${ fmtCDR(ability.cooldown[0]) } seconds at rank 1` +
+		` to ${ fmtCDR(ability.cooldown[ ability.cooldown.length - 1 ]) } seconds at rank ${ ability.cooldown.length }.`);
 	let card = new Card( `${ability.name} Cooldown` );
 	let cds = ability.cooldown;
 	card.setImage( ddragon + '/img/spell/' + ability.image.full );
 	// TODO: migrate to table cards when out of dev preview
+	// TODO: fix ultimate hunter text
 	// (https://developers.google.com/actions/assistant/responses#table_card)
 	card.setText(
-		`0% CDR: ${ cds.join('/') }
-		45% CDR: ${ cds.map(x => x * 0.55).join('/') }`
+		`0% CDR: ${ cds.join('/') }  \n
+		45% CDR: ${ cds.map(x => fmtCDR(x)).join('/') }`
 		/*+ (isUltimate) ? 
 		`0% CDR with Ultimate Hunter: ${ cds.map(x => (x * 0.85).toFixed(1)).join('/')}
 		45% CDR with Ultimate Hunter: ${ cds.map(x => (x * 0.40).toFixed(1)).join('/')}`
