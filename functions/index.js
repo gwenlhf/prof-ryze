@@ -56,15 +56,15 @@ function abilityCooldownHandler( conv ) {
 // TODO: fix ultimate hunter text
 // (https://developers.google.com/actions/assistant/responses#table_card)
 function abilityCooldownResponses( conv, ability ) {
-	let fmtCDR = (x, cdr) => Math.floor(x * (1 - cdr));
+	let fmtCDR = ( x, cdr=0 ) => Math.floor(x * (1 - cdr));
 	let cds = ability.cooldown;
-
+	
 	let ttsText = `${ ability.name } has a cooldown of between ${ ability.cooldown[0] } ` + 
 			`seconds at rank 1 to ${ ability.cooldown[ ability.cooldown.length-1 ] }` +
 			` seconds at rank ${ ability.cooldown.length }.` +
-			` With 45% cooldown reduction, it has a cooldown of ${ fmtCDR(ability.cooldown[0]) } seconds at rank 1` +
-			` to ${ fmtCDR(ability.cooldown[ ability.cooldown.length - 1 ]) } seconds at rank ${ ability.cooldown.length }.`
-
+			` With 45% cooldown reduction, it has a cooldown of ${ fmtCDR(ability.cooldown[0], 0.45) } seconds at rank 1` +
+			` to ${ fmtCDR(ability.cooldown[ ability.cooldown.length - 1 ], 0.45) } seconds at rank ${ ability.cooldown.length }.`;
+	
 	let base_card = {
 		title : `${ability.name} Cooldown`,
 		image : new Image({
