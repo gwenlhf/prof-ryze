@@ -7,7 +7,10 @@ const fbConfig = require('./nocommit/prof-ryze-firebase-usercfg.json');
 const version = '8.9.1';
 const ddragon = `http://ddragon.leagueoflegends.com/cdn/${ version }`;
 
+
 // constants
+
+const app = dialogflow();
 
 const ABILITIES = {
 	// Riot's API architecture makes it impossible to treat passives as abilities
