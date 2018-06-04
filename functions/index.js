@@ -71,8 +71,7 @@ function abilityCooldownResponses( conv, ability ) {
 			url : ddragon + '/img/spell/' + ability.image.full,
 			alt : ability.name
 		}),
-		text : `0% CDR: ${ cds.join('/') }  \n
-				45% CDR: ${ cds.map((x, 0.45) => fmtCDR(x)).join('/') }`
+		text : `0% CDR: ${ cds.join('/') }  \n45% CDR: ${ cds.map(x => fmtCDR(x, 0.45)).join('/') }`
 	};
 	conv.ask( new SimpleResponse(ttsText));
 	conv.ask( new BasicCard(base_card));
@@ -87,7 +86,7 @@ function abilityScalingHandler( conv ) {
 		.then( ability => abilityScalingResponses( conv, ability ) );
 }
 
-function abilityScalingResponses( conv, ability ) {	
+function abilityScalingResponses( conv, ability ) {
 	let base_card = {
 		title : `Scaling ${ ability.name }`,
 		image : new Image({
