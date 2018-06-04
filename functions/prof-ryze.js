@@ -1,6 +1,6 @@
 'use strict';
 
-const { dialogflow, BasicCard, SimpleResponse, Image } = require('actions-on-google');
+const { BasicCard, SimpleResponse, Image } = require('actions-on-google');
 const firebase = require('firebase');
 const fbConfig = require('./nocommit/prof-ryze-firebase-usercfg.json');
 const version = '8.9.1';

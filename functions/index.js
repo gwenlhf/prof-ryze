@@ -2,6 +2,7 @@
 
 const { ryze } = require('./prof-ryze.js');
 const functions = require('firebase-functions');
+const { dialogflow } = require('actions-on-google');
 
 const app = dialogflow();
 
