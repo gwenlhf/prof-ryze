@@ -64,10 +64,10 @@ function abilityCooldownResponses( conv, ability ) {
 
 	let base_card = {
 		title : `${ability.name} Cooldown`,
-		image : {
+		image : new Image({
 			url : ddragon + '/img/spell' + ability.image.full,
 			alt : ability.name
-		},
+		}),
 		text : `0% CDR: ${ cds.join('/') }  \n
 				45% CDR: ${ cds.map(x => fmtCDR(x)).join('/') }`
 	};
