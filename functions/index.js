@@ -38,10 +38,63 @@ app.intent('Ability-Desc', abilityDescHandler);
 app.intent('Ability-Cooldown', abilityCooldownHandler);
 app.intent('Ability-Scaling', abilityScalingHandler);
 app.intent('Passive-Desc', passiveDescHandler);
+app.intent('Ability-Cost', abilityCostHandler);
 app.intent('Champ-Tip-Ally', conv => champTipHandler( conv, true ) );
 app.intent('Champ-Tip-Enemy', conv => champTipHandler( conv, false ) );
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
+
+// Ability-Cost
+function abilityCostHandler( conv ) {
+	let key = conv.parameters.Champion;
+	let idx = ABILITIES[ conv.parameters.Ability ];
+	return fetchChampAbility( key, idx )
+		.then( ability => abilityCostResponses( conv, ability )); 
+}
+
+function abilityCostResponses( conv, ability ) {
+	let costs = ability.cost;
+	let ttsText = "";
+	let base_card  = {};
+
+	// Riot's scheme for costType is absolute unmanaged insanity
+	if (ability.costType == "No Cost") {
+		ttsText = `${ ability.name } has no cost.`;
+		base_card = {
+			title : `${ability.name} Cost`,
+			image : new Image({
+				url : ddragon + '/img/spell/' + ability.image.full,
+				alt : ability.name
+			}),
+			text : text
+		};
+	// space in " Mana" is not a typo
+	} else if (ability.costType != " Mana") {
+		ttsText = `Sorry, abilities that don't use Mana are not yet supported.`;
+		base_card = {
+			title : `${ability.name} Cost`,
+			image : new Image({
+				url : ddragon + '/img/spell/' + ability.image.full,
+				alt : ability.name
+			}),
+			text : ttsText
+		};
+	} else {
+		ttsText = `${ ability.name } has a mana cost of ${ ability.cost[0] }` + 
+				` at rank 1 and ${ ability.cost[ ability.cost.length-1 ] }` +
+				` at rank ${ ability.cost.length }.`
+		base_card = {
+			title : `${ability.name} Cost`,
+			image : new Image({
+				url : ddragon + '/img/spell/' + ability.image.full,
+				alt : ability.name
+			}),
+			text : `Cost: ${ costs.join('/') }`
+		};
+	}
+	conv.ask( new SimpleResponse(ttsText));
+	conv.ask( new BasicCard(base_card));
+}
 
 // Ability-Cooldown
 
@@ -59,11 +112,11 @@ function abilityCooldownResponses( conv, ability ) {
 	let fmtCDR = ( x, cdr=0 ) => Math.floor(x * (1 - cdr));
 	let cds = ability.cooldown;
 	
-	let ttsText = `${ ability.name } has a cooldown of between ${ ability.cooldown[0] } ` + 
-			`seconds at rank 1 to ${ ability.cooldown[ ability.cooldown.length-1 ] }` +
+	let ttsText = `${ ability.name } has a cooldown of ${ ability.cooldown[0] }` + 
+			` seconds at rank 1 and ${ ability.cooldown[ ability.cooldown.length-1 ] }` +
 			` seconds at rank ${ ability.cooldown.length }.` +
 			` With 45% cooldown reduction, it has a cooldown of ${ fmtCDR(ability.cooldown[0], 0.45) } seconds at rank 1` +
-			` to ${ fmtCDR(ability.cooldown[ ability.cooldown.length - 1 ], 0.45) } seconds at rank ${ ability.cooldown.length }.`;
+			` and ${ fmtCDR(ability.cooldown[ ability.cooldown.length - 1 ], 0.45) } seconds at rank ${ ability.cooldown.length }.`;
 	
 	let base_card = {
 		title : `${ability.name} Cooldown`,
@@ -106,7 +159,7 @@ function abilityScalingResponses( conv, ability ) {
 
 	// "Ability Name scales with x."
 	// "Ability Name scales with x and y."
-	// "Ability Name scales with x, y, and z."
+	// "Ability Name scales with x, y and z." (Can't swing the Oxford comma without another ternary, probably)
 	base_card.text = `${ability.name} scales with ${
 		scales.slice(0, scales.length - 1).join(', ')
 	}${ (scales.length > 1) ?
