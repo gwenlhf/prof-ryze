@@ -68,11 +68,11 @@ function abilityCooldownResponses( conv, ability ) {
 	let base_card = {
 		title : `${ability.name} Cooldown`,
 		image : new Image({
-			url : ddragon + '/img/spell' + ability.image.full,
+			url : ddragon + '/img/spell/' + ability.image.full,
 			alt : ability.name
 		}),
 		text : `0% CDR: ${ cds.join('/') }  \n
-				45% CDR: ${ cds.map(x => fmtCDR(x)).join('/') }`
+				45% CDR: ${ cds.map((x, 0.45) => fmtCDR(x)).join('/') }`
 	};
 	conv.ask( new SimpleResponse(ttsText));
 	conv.ask( new BasicCard(base_card));
@@ -169,8 +169,17 @@ function passiveDescHandler( conv ) {
 		.then(passive => passiveDescResponses(conv, passive));
 }
 
+// literally the same as abilityDescResponses with one url change. Thanks Riot
 function passiveDescResponses( conv, passive ) {
-	return abilityDescResponse(conv, passive);
+	conv.ask(new SimpleResponse(`${ ability.name }: ${ ability.sanitizedDescription }`));
+	conv.ask(new BasicCard({
+		title : ability.name,
+		text : ability.sanitizedDescription,
+		image : new Image({
+			url : ddragon + '/img/passive/' + ability.image.full,
+			alt : ability.name
+		})
+	}));
 }
 
 function abilityDescResponses( conv, ability ) {
