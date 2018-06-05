@@ -27,7 +27,7 @@ module.exports = function (options) {
 		throw new Error("Data Dragon endpoint required");
 	}
 	let db = options.db;
-
+	let ddragon = options.ddragon;
 
 	// Ability-Cost
 	function abilityCostHandler( conv ) {
