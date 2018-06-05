@@ -26,22 +26,3 @@ module.exports = function ( options ) {
 
 	return handlers;
 }
-
-// debug code
-
-/*let dummy_conv = {
-	idx: 0,
-	parameters : {
-		Champion: 'Jax',
-		Ability : 'Q'
-	},
-	requestSource : 'ACTIONS_ON_GOOGLE',
-		this[this.idx] = e;
-	add: function(e) {
-		this.idx++;
-	}
-};
-
-abilityScalingHandler(dummy_agent)
-	.then(() => console.log(dummy_agent))
-	.catch(err => console.log(err));*/
