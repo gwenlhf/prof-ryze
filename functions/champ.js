@@ -47,7 +47,7 @@ module.exports = function (options) {
 	// DB Fetch
 
 	function fetchChampImage ( key ) {
-		return retrieveDb(`/champs/data/${key}/image/full`);
+		return db.retrieve(`/champs/data/${key}/image/full`);
 	}
 	function fetchChampTips( key, isAlly=true ) {
 		return db.retrieve(`/champs/data/${ key }/${ (isAlly) ? 'ally' : 'enemy' }tips`);
