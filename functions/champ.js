@@ -54,7 +54,7 @@ module.exports = function (options) {
 	}
 
 	return {
-		"Champ-Tip-Enemy" : conv => champTipHandler(conv, true),
-		"Champ-Tip-Ally" : conv => champTipHandler(conv, false)
+		"Champ-Tip-Enemy" : conv => champTipHandler(conv, false),
+		"Champ-Tip-Ally" : conv => champTipHandler(conv, true)
 	};
 }
