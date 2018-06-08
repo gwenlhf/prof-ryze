@@ -23,8 +23,8 @@ module.exports = function ( options ) {
 
 	// literally the same as abilityDescResponses with one url change. Thanks Riot
 	function passiveDescResponses( conv, passive ) {
-		conv.ask(new SimpleResponse(`${ passive.name }: ${ passive.sanitizedDescription }`));
-		conv.ask(new BasicCard({
+		conv.close(new SimpleResponse(`${ passive.name }: ${ passive.sanitizedDescription }`));
+		conv.close(new BasicCard({
 			title : passive.name,
 			text : passive.sanitizedDescription,
 			image : new Image({

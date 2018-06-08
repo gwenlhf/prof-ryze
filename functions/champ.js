@@ -40,8 +40,8 @@ module.exports = function (options) {
 				alt : tip.Champion
 			})
 		};
-		conv.ask(new SimpleResponse(base_card.text));
-		conv.ask(new BasicCard(base_card));
+		conv.close(new SimpleResponse(base_card.text));
+		conv.close(new BasicCard(base_card));
 	}
 
 	// DB Fetch

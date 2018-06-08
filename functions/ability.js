@@ -77,8 +77,8 @@ module.exports = function (options) {
 				text : `Cost: ${ costs.join('/') }`
 			};
 		}
-		conv.ask( new SimpleResponse(ttsText));
-		conv.ask( new BasicCard(base_card));
+		conv.close( new SimpleResponse(ttsText));
+		conv.close( new BasicCard(base_card));
 	}
 
 	// Ability-Cooldown
@@ -111,8 +111,8 @@ module.exports = function (options) {
 			}),
 			text : `0% CDR: ${ cds.join('/') }  \n45% CDR: ${ cds.map(x => fmtCDR(x, 0.45)).join('/') }`
 		};
-		conv.ask( new SimpleResponse(ttsText));
-		conv.ask( new BasicCard(base_card));
+		conv.close( new SimpleResponse(ttsText));
+		conv.close( new BasicCard(base_card));
 	}
 
 	// Ability-Scaling
@@ -152,8 +152,8 @@ module.exports = function (options) {
 			scales[0]
 		}.`;
 
-		conv.ask(new SimpleResponse(base_card.text));
-		conv.ask(new BasicCard(base_card));
+		conv.close(new SimpleResponse(base_card.text));
+		conv.close(new BasicCard(base_card));
 	}
 
 	// Ability-Desc
@@ -167,8 +167,8 @@ module.exports = function (options) {
 	}
 
 	function abilityDescResponses( conv, ability ) {
-		conv.ask(new SimpleResponse(`${ ability.name }: ${ ability.sanitizedDescription }`));
-		conv.ask(new BasicCard({
+		conv.close(new SimpleResponse(`${ ability.name }: ${ ability.sanitizedDescription }`));
+		conv.close(new BasicCard({
 			title : ability.name,
 			text : ability.sanitizedDescription,
 			image : new Image({
